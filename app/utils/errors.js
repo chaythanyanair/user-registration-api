@@ -20,6 +20,11 @@ module.exports = {
       code: 1006,
       httpCode: 400,
       httpResponse: 'User with this email already exists'
+    },
+    ParameterMissing: {
+      code: 1007,
+      httpCode: 400,
+      httpResponse: 'Email and password is required'
     }
   }
 };

@@ -103,14 +103,13 @@ app.use(function (req, res, next) {
 require('./app/routes')(app);
 
 // Catch-all error handler
-app.use(function (err, req, res, next) {
+app.use(function (error, req, res, next) {
     logger.error(error.message);
     logger.error(error.stack);
     res.status(500).json({
       code: 1000,
       msg: 'Internal Server Error',
     });
-  next();
 });
 
 // Assume 404 since no middleware responded

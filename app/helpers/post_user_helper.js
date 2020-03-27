@@ -59,6 +59,12 @@ class PostUserHelper {
     this.dbClient = pgPool.dbClient;
     try {
       await this.dbClient.query('BEGIN');
+      if (!user.email || !user.password) {
+        return {
+          error: errors.CUSTOM_ERR.ParameterMissing,
+          result: null
+        }
+      }
       const exists = await this._userExists(user.email);
       if (exists) {
         return {
@@ -109,7 +115,7 @@ class PostUserHelper {
       fields.push(Fields.CREATED_AT);
     }
     const placeHolders =[];
-    
+
     const insertValues = setObj[Fields.ROLES].map((role) => {
       const value = [user[Fields.ID], role, user[Fields.CREATED_BY] || 1,
         user[Fields.UPDATED_BY] || 1];
