@@ -37,7 +37,7 @@ $ curl --location --request GET 'http://localhost:9000/user/9'
 The application currently supports two APIs. One for registering new users into the database and another for accesing the user details.
 
 
-__Application URL__: https://banking-api-server.herokuapp.com
+__Application URL__: http://localhost:9000
 
 
 1. POST /user API
