@@ -1,0 +1,12 @@
+{
+  "default": {
+    "host": "localhost",
+    "migrations-dir": "config/migrations",
+    "user": "user_admin",
+    "password" : "password",
+    "port": 5432,
+    "database": "user",
+    "driver": "pg",
+    "schema": "public"
+  }
+}

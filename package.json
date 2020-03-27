@@ -1,0 +1,22 @@
+{
+  "name": "user-registration",
+  "version": "1.0.0",
+  "description": "Application that registers and lists users",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chaythanya Sivakumar",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "body-parser": "^1.18.3",
+    "bunyan": "^1.8.12",
+    "db-migrate": "^0.11.6",
+    "db-migrate-pg": "^1.0.0",
+    "eslint": "^6.8.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "pg": "^7.11.0"
+  }
+}
