@@ -6,7 +6,6 @@
 
 module.exports = {
 
-  // Generic errors
   GENERIC_ERR: {
     internal: {
       code: 1001,
@@ -14,7 +13,6 @@ module.exports = {
       httpResponse: 'Internal error'
     }
   },
-  // Custom errors
   CUSTOM_ERR: {
     UserAlreadyPresent: {
       code: 1006,

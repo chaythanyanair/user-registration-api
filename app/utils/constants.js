@@ -19,7 +19,7 @@ const Constants = {
     ROLE: 'role'
   },
   Tables: {
-    USER: 'user_account',
+    USER: 'users',
     USER_ROLE: 'user_role'
   },
   Roles: {
@@ -29,6 +29,4 @@ const Constants = {
   }
 };
 
-
 module.exports = Constants;
-

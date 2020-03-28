@@ -1,6 +1,6 @@
 CREATE TYPE roles AS enum('admin', 'observer', 'editor');
 
-CREATE TABLE IF NOT EXISTS user_account (
+CREATE TABLE IF NOT EXISTS users (
   id SERIAL,
   email VARCHAR(255),
   first_name VARCHAR(255) DEFAULT NULL,
@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS user_role (
   created_by INTEGER DEFAULT 1,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_by INTEGER DEFAULT 1,
-  FOREIGN KEY (user_id) REFERENCES user_account(id),
+  FOREIGN KEY (user_id) REFERENCES users(id),
   PRIMARY KEY (user_id, role)
 );
 

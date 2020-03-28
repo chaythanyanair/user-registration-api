@@ -1,9 +1,9 @@
 'use sctrict'
+
 const bcrypt = require('bcryptjs')
 
 class Utils {
-  constructor() {
-  }
+  constructor() {}
 
   getEncryptedPassword(password) {
     const rounds = 10;

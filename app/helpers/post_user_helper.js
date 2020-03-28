@@ -1,4 +1,5 @@
 'use strict';
+
 const pgPool = require('../config/data_source');
 const logger = require('../utils/logger');
 const utils = require('../utils/utils');
@@ -6,8 +7,7 @@ const {Roles, Fields, Tables} = require('../utils/constants');
 const errors = require('../utils/errors')
 
 class PostUserHelper {
-  constructor() {
-   }
+  constructor() {}
 
   _formatResult(userData) {
       const user = {

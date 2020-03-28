@@ -125,5 +125,3 @@ exports = module.exports = app;
 
 // Logging initialization
 logger.info(`API Server started on port 9000`);
-
-
