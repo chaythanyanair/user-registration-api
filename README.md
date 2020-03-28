@@ -12,7 +12,7 @@ The purpose of this server is to register users to database with the very first 
 Clone the repo and install the packages.
 
 ``` bash
-$ git clone https://github.com/chaythanyanair/user-registration-api.gits
+$ git clone https://github.com/chaythanyanair/user-registration-api.git
 $ npm install
 ```
 
@@ -58,6 +58,7 @@ Possible `roles` for a user:
 2. `editor`
 3. `observer`
 
+Sample curl for testing the API:
 
 ```bash
 curl --location --request POST 'http://localhost:9000/user/' \
@@ -77,6 +78,8 @@ curl --location --request POST 'http://localhost:9000/user/' \
 2. GET /user/:userId API
 
 This API fetches details of the user for a given user id.
+
+Sample curl for testing the API:
 
 ```bash
 curl --location --request GET 'http://localhost:9000/user/2' 
