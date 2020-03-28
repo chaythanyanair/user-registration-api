@@ -46,6 +46,19 @@ This API can be used to add new users to the database. The very first user of th
 
 For further users, if you do not specify any user permissions in the request body `observer` role will be given by default.
 
+__Params__
+1. `email` Email id of the user (required)
+2. `password` Password (required)
+3. `first_name` First name of the user (optional)
+4. `last_name` Last name of the user (optional)
+5. `roles` Array of role list (optional)
+
+Possible `roles` for a user:
+1. `admin`
+2. `editor`
+3. `observer`
+
+
 ```bash
 curl --location --request POST 'http://localhost:9000/user/' \
 --header 'Content-Type: application/json' \
