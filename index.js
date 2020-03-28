@@ -57,14 +57,14 @@ function lock() {
 }
 
 function release(scope) {
-  logger.info(`Releasing lock ${lockName} for ${scope || 'coupon'}...`);
+  logger.info(`Releasing lock ${lockName} ...`);
   return postgresClient.query(`SELECT pg_advisory_unlock('${lockName}');`)
     .then(({rows}) => {
       if (Array.isArray(rows) && rows.length === 1 &&
         rows[0]['pg_advisory_unlock']) {
-        logger.info(`Lock ${lockName} released for ${scope || 'coupon'}.`);
+        logger.info(`Lock ${lockName} released...`);
       } else {
-        logger.info(`Cannot release lock ${lockName} for ${scope || 'coupon'}.`);
+        logger.info(`Cannot release lock ${lockName}.`);
       }
     });
 }
